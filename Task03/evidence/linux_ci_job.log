@@ -1,0 +1,198 @@
+﻿2026-11-06T03:34:53.3492939Z Current runner version: '2.338.2'
+2026-11-06T03:34:53.3519920Z ##[group]Runner Image Provisioner
+2026-11-06T03:34:53.3520821Z Hosted Compute Agent
+2026-11-06T03:34:53.3521475Z Version: 20261028.624
+2026-11-06T03:34:53.3522138Z Commit: 54898b74c23fde5556c9b3c3a2290865feef0dfe
+2026-11-06T03:34:53.3522872Z Build Date: 2026-10-28T21:51:42Z
+2026-11-06T03:34:53.3523657Z Worker ID: {4c498d3c-4035-45bb-98bc-7783818e2ba0}
+2026-11-06T03:34:53.3524382Z Region: westus2
+2026-11-06T03:34:53.3525282Z Cloud: Azure
+2026-11-06T03:34:53.3525873Z ##[endgroup]
+2026-11-06T03:34:53.3527385Z ##[group]Operating System
+2026-11-06T03:34:53.3528139Z Ubuntu
+2026-11-06T03:34:53.3528668Z 24.04.5
+2026-11-06T03:34:53.3529178Z LTS
+2026-11-06T03:34:53.3529766Z ##[endgroup]
+2026-11-06T03:34:53.3530365Z ##[group]Runner Image
+2026-11-06T03:34:53.3531048Z Image: ubuntu-24.04
+2026-11-06T03:34:53.3531641Z Version: 20261101.360.1
+2026-11-06T03:34:53.3532989Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261101.360/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-06T03:34:53.3534572Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261101.360
+2026-11-06T03:34:53.3536041Z ##[endgroup]
+2026-11-06T03:34:53.3537220Z ##[group]GITHUB_TOKEN Permissions
+2026-11-06T03:34:53.3539418Z Contents: read
+2026-11-06T03:34:53.3540095Z Metadata: read
+2026-11-06T03:34:53.3540681Z ##[endgroup]
+2026-11-06T03:34:53.3542825Z Secret source: Actions
+2026-11-06T03:34:53.3543774Z Cache mode: write
+2026-11-06T03:34:53.3544601Z Prepare workflow directory
+2026-11-06T03:34:53.3930674Z Prepare all required actions
+2026-11-06T03:34:53.4060987Z Complete job name: verify
+2026-11-06T03:34:53.5267575Z ##[group]Run git init .
+2026-11-06T03:34:53.5268448Z [36;1mgit init .[0m
+2026-11-06T03:34:53.5269228Z [36;1mgit remote add origin "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY"[0m
+2026-11-06T03:34:53.5270363Z [36;1mgit fetch --depth=1 origin "$GITHUB_SHA"[0m
+2026-11-06T03:34:53.5271235Z [36;1mgit checkout --detach FETCH_HEAD[0m
+2026-11-06T03:34:53.5539705Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-06T03:34:53.5541072Z ##[endgroup]
+2026-11-06T03:34:53.5959636Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-06T03:34:53.5960893Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-06T03:34:53.5962160Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-06T03:34:53.5963067Z hint: call:
+2026-11-06T03:34:53.5963632Z hint:
+2026-11-06T03:34:53.5964302Z hint: 	git config --global init.defaultBranch <name>
+2026-11-06T03:34:53.5965495Z hint:
+2026-11-06T03:34:53.5966517Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-06T03:34:53.5967606Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-06T03:34:53.6053517Z hint:
+2026-11-06T03:34:53.6054418Z hint: 	git branch -m <name>
+2026-11-06T03:34:53.6055535Z hint:
+2026-11-06T03:34:53.6056728Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-06T03:34:53.6060413Z Initialized empty Git repository in /home/runner/work/DSA01-192471006-Assignment3/DSA01-192471006-Assignment3/.git/
+2026-11-06T03:34:53.8951860Z From https://github.com/vinoththecool7-netizen/DSA01-192471006-Assignment3
+2026-11-06T03:34:53.8952984Z  * branch            9eb7dff1deff404c6c7334574e5ec3c75991f7b0 -> FETCH_HEAD
+2026-11-06T03:34:53.9103161Z HEAD is now at 9eb7dff Run Linux CI to verify all experiments and obtain actual leak detector evidence
+2026-11-06T03:34:53.9234239Z ##[group]Run g++ --version
+2026-11-06T03:34:53.9235107Z [36;1mg++ --version[0m
+2026-11-06T03:34:53.9235647Z [36;1muname -a[0m
+2026-11-06T03:34:53.9255920Z shell: /usr/bin/bash -e {0}
+2026-11-06T03:34:53.9256454Z ##[endgroup]
+2026-11-06T03:34:53.9943245Z g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+2026-11-06T03:34:53.9944519Z Copyright (C) 2023 Free Software Foundation, Inc.
+2026-11-06T03:34:53.9946000Z This is free software; see the source for copying conditions.  There is NO
+2026-11-06T03:34:53.9947693Z warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+2026-11-06T03:34:53.9948475Z 
+2026-11-06T03:34:53.9955598Z Linux runnervm7aw5e 7.0.0-1017-azure #17~24.04.1-Ubuntu SMP PREEMPT Thu Sep 24 18:46:57 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+2026-11-06T03:34:54.0003595Z ##[group]Run python3 scripts/validate.py
+2026-11-06T03:34:54.0004259Z [36;1mpython3 scripts/validate.py[0m
+2026-11-06T03:34:54.0023430Z shell: /usr/bin/bash -e {0}
+2026-11-06T03:34:54.0023950Z ##[endgroup]
+2026-11-06T03:35:03.8455458Z Task01 book_O0 PASS 
+2026-11-06T03:35:03.8456135Z Task01 implicit.ok_O0 PASS 
+2026-11-06T03:35:03.8456467Z Task01 reorder.warn_O0 PASS 
+2026-11-06T03:35:03.8456769Z Task02 complete_O0 PASS 
+2026-11-06T03:35:03.8457074Z Task02 main_O0 PASS 
+2026-11-06T03:35:03.8457376Z Task02 vector_O0 PASS 
+2026-11-06T03:35:03.8457662Z Task03 logger_O0 PASS 
+2026-11-06T03:35:03.8457937Z Task03 main_O0 PASS 
+2026-11-06T03:35:03.8458235Z Task03 missing_delete_O0 PASS 
+2026-11-06T03:35:03.8458596Z Task04 complete_O0 PASS 
+2026-11-06T03:35:03.8458883Z Task04 io_O0 PASS 
+2026-11-06T03:35:03.8459138Z Task04 main_O0 PASS 
+2026-11-06T03:35:03.8459445Z Task05 benchmark_O0 PASS 
+2026-11-06T03:35:03.8459785Z Task05 benchmark_O2 PASS 
+2026-11-06T03:35:03.8460164Z Task05 counter_O0 PASS 
+2026-11-06T03:35:03.8460495Z Task05 main_O0 PASS 
+2026-11-06T03:35:03.8460766Z Task06 text_O0 PASS 
+2026-11-06T03:35:03.8461024Z Task06 text_O2 PASS 
+2026-11-06T03:35:03.8461306Z Task06 text_fnoelideconstructors PASS 
+2026-11-06T03:35:03.8461636Z Task07 main_O0 PASS 
+2026-11-06T03:35:03.8555706Z ##[group]Run python3 scripts/validate.py --sanitize
+2026-11-06T03:35:03.8556212Z [36;1mpython3 scripts/validate.py --sanitize[0m
+2026-11-06T03:35:03.8576852Z shell: /usr/bin/bash -e {0}
+2026-11-06T03:35:03.8577160Z ##[endgroup]
+2026-11-06T03:35:16.6512623Z Task01 book_O0 PASS 
+2026-11-06T03:35:16.6513707Z Task01 implicit.ok_O0 PASS 
+2026-11-06T03:35:16.6514579Z Task01 reorder.warn_O0 PASS 
+2026-11-06T03:35:16.6515441Z Task02 complete_O0 PASS 
+2026-11-06T03:35:16.6515865Z Task02 main_O0 PASS 
+2026-11-06T03:35:16.6516347Z Task02 shallow_broken_O0 PASS expected sanitizer rejection
+2026-11-06T03:35:16.6516774Z Task02 vector_O0 PASS 
+2026-11-06T03:35:16.6517133Z Task02 without_copy_broken_O0 PASS expected sanitizer rejection
+2026-11-06T03:35:16.6517663Z Task03 delete_mismatch_broken_O0 PASS expected sanitizer rejection
+2026-11-06T03:35:16.6518062Z Task03 logger_O0 PASS 
+2026-11-06T03:35:16.6518303Z Task03 main_O0 PASS 
+2026-11-06T03:35:16.6518563Z Task03 missing_delete_O0 PASS 
+2026-11-06T03:35:16.6518889Z Task04 complete_O0 PASS 
+2026-11-06T03:35:16.6519132Z Task04 io_O0 PASS 
+2026-11-06T03:35:16.6519399Z Task04 main_O0 PASS 
+2026-11-06T03:35:16.6519648Z Task05 benchmark_O0 PASS 
+2026-11-06T03:35:16.6519900Z Task05 benchmark_O2 PASS 
+2026-11-06T03:35:16.6520146Z Task05 counter_O0 PASS 
+2026-11-06T03:35:16.6520377Z Task05 main_O0 PASS 
+2026-11-06T03:35:16.6520600Z Task06 text_O0 PASS 
+2026-11-06T03:35:16.6520824Z Task06 text_O2 PASS 
+2026-11-06T03:35:16.6521098Z Task06 text_fnoelideconstructors PASS 
+2026-11-06T03:35:16.6521410Z Task07 main_O0 PASS 
+2026-11-06T03:35:16.6636255Z ##[group]Run python3 scripts/linux_leaks.py
+2026-11-06T03:35:16.6636661Z [36;1mpython3 scripts/linux_leaks.py[0m
+2026-11-06T03:35:16.6657610Z shell: /usr/bin/bash -e {0}
+2026-11-06T03:35:16.6657876Z ##[endgroup]
+2026-11-06T03:35:17.0625440Z BEGIN LINUX LEAK EXPERIMENT missing_delete.cpp
+2026-11-06T03:35:17.0626298Z 
+2026-11-06T03:35:17.0626567Z 
+2026-11-06T03:35:17.0626980Z =================================================================
+2026-11-06T03:35:17.0627837Z ==2806==ERROR: LeakSanitizer: detected memory leaks
+2026-11-06T03:35:17.0628473Z 
+2026-11-06T03:35:17.0628846Z Direct leak of 56 byte(s) in 1 object(s) allocated from:
+2026-11-06T03:35:17.0629989Z     #0 0x7fd2694fe548 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+2026-11-06T03:35:17.0631268Z     #1 0x55d3e8a607b5 in main Task03/missing_delete.cpp:2
+2026-11-06T03:35:17.0633260Z     #2 0x7fd268c2a1c9  (/lib/x86_64-linux-gnu/libc.so.6+0x2a1c9) (BuildId: a4a7992a8e66555c8141ab2a08a8465ff6e0ea65)
+2026-11-06T03:35:17.0635369Z     #3 0x7fd268c2a28a in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2a28a) (BuildId: a4a7992a8e66555c8141ab2a08a8465ff6e0ea65)
+2026-11-06T03:35:17.0637647Z     #4 0x55d3e8a60644 in _start (/home/runner/work/DSA01-192471006-Assignment3/DSA01-192471006-Assignment3/build/linux_leaks_missing_delete+0x2644) (BuildId: e061c0a4d97daa2d6c6432fa9a2627407bc926d6)
+2026-11-06T03:35:17.0639231Z 
+2026-11-06T03:35:17.0639725Z Indirect leak of 200 byte(s) in 10 object(s) allocated from:
+2026-11-06T03:35:17.0640961Z     #0 0x7fd2694fe6c8 in operator new[](unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:98
+2026-11-06T03:35:17.0657232Z     #1 0x55d3e8a60de5 in Event::Event(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int) Task03/seat_map.hpp:18
+2026-11-06T03:35:17.0658762Z     #2 0x55d3e8a607fe in main Task03/missing_delete.cpp:2
+2026-11-06T03:35:17.0660205Z     #3 0x7fd268c2a1c9  (/lib/x86_64-linux-gnu/libc.so.6+0x2a1c9) (BuildId: a4a7992a8e66555c8141ab2a08a8465ff6e0ea65)
+2026-11-06T03:35:17.0661675Z     #4 0x7fd268c2a28a in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2a28a) (BuildId: a4a7992a8e66555c8141ab2a08a8465ff6e0ea65)
+2026-11-06T03:35:17.0663030Z     #5 0x55d3e8a60644 in _start (/home/runner/work/DSA01-192471006-Assignment3/DSA01-192471006-Assignment3/build/linux_leaks_missing_delete+0x2644) (BuildId: e061c0a4d97daa2d6c6432fa9a2627407bc926d6)
+2026-11-06T03:35:17.0663930Z 
+2026-11-06T03:35:17.0664096Z Indirect leak of 80 byte(s) in 1 object(s) allocated from:
+2026-11-06T03:35:17.0664696Z     #0 0x7fd2694fe6c8 in operator new[](unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:98
+2026-11-06T03:35:17.0666571Z     #1 0x55d3e8a60d51 in Event::Event(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int) Task03/seat_map.hpp:17
+2026-11-06T03:35:17.0667424Z     #2 0x55d3e8a607fe in main Task03/missing_delete.cpp:2
+2026-11-06T03:35:17.0667999Z     #3 0x7fd268c2a1c9  (/lib/x86_64-linux-gnu/libc.so.6+0x2a1c9) (BuildId: a4a7992a8e66555c8141ab2a08a8465ff6e0ea65)
+2026-11-06T03:35:17.0668934Z     #4 0x7fd268c2a28a in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2a28a) (BuildId: a4a7992a8e66555c8141ab2a08a8465ff6e0ea65)
+2026-11-06T03:35:17.0670220Z     #5 0x55d3e8a60644 in _start (/home/runner/work/DSA01-192471006-Assignment3/DSA01-192471006-Assignment3/build/linux_leaks_missing_delete+0x2644) (BuildId: e061c0a4d97daa2d6c6432fa9a2627407bc926d6)
+2026-11-06T03:35:17.0671151Z 
+2026-11-06T03:35:17.0671384Z Indirect leak of 21 byte(s) in 1 object(s) allocated from:
+2026-11-06T03:35:17.0672042Z     #0 0x7fd2694fe548 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+2026-11-06T03:35:17.0673661Z     #1 0x55d3e8a61803 in void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) /usr/include/c++/13/bits/basic_string.tcc:229
+2026-11-06T03:35:17.0675934Z     #2 0x55d3e8a6152c in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&) /usr/include/c++/13/bits/basic_string.h:649
+2026-11-06T03:35:17.0677024Z     #3 0x55d3e8a607e5 in main Task03/missing_delete.cpp:2
+2026-11-06T03:35:17.0677600Z     #4 0x7fd268c2a1c9  (/lib/x86_64-linux-gnu/libc.so.6+0x2a1c9) (BuildId: a4a7992a8e66555c8141ab2a08a8465ff6e0ea65)
+2026-11-06T03:35:17.0678597Z     #5 0x7fd268c2a28a in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2a28a) (BuildId: a4a7992a8e66555c8141ab2a08a8465ff6e0ea65)
+2026-11-06T03:35:17.0679910Z     #6 0x55d3e8a60644 in _start (/home/runner/work/DSA01-192471006-Assignment3/DSA01-192471006-Assignment3/build/linux_leaks_missing_delete+0x2644) (BuildId: e061c0a4d97daa2d6c6432fa9a2627407bc926d6)
+2026-11-06T03:35:17.0681043Z 
+2026-11-06T03:35:17.0681237Z SUMMARY: AddressSanitizer: 357 byte(s) leaked in 13 allocation(s).
+2026-11-06T03:35:17.0681681Z 
+2026-11-06T03:35:17.0682960Z {"source": "missing_delete.cpp", "expected_leak": true, "exit": 23, "passed": true, "compile": "g++ -std=c++17 -Wall -Wextra -Wpedantic -O0 -g -fsanitize=address -fno-omit-frame-pointer -Iinclude Task03/missing_delete.cpp -o /home/runner/work/DSA01-192471006-Assignment3/DSA01-192471006-Assignment3/build/linux_leaks_missing_delete"}
+2026-11-06T03:35:17.4695393Z BEGIN LINUX LEAK EXPERIMENT main.cpp
+2026-11-06T03:35:17.4695932Z construct stack rows=2 seats=3
+2026-11-06T03:35:17.4696189Z book, PASS
+2026-11-06T03:35:17.4696397Z duplicate booking, PASS
+2026-11-06T03:35:17.4696858Z construct block rows=1 seats=2
+2026-11-06T03:35:17.4697262Z construct heap rows=1 seats=1
+2026-11-06T03:35:17.4697672Z heap booking, PASS
+2026-11-06T03:35:17.4697997Z destroy heap booked=1
+2026-11-06T03:35:17.4698335Z destroy block booked=0
+2026-11-06T03:35:17.4698682Z cancel, PASS
+2026-11-06T03:35:17.4699011Z empty cancellation, PASS
+2026-11-06T03:35:17.4699409Z invalid seat, PASS
+2026-11-06T03:35:17.4699636Z destroy stack booked=0
+2026-11-06T03:35:17.4699867Z all scoped events destroyed, PASS
+2026-11-06T03:35:17.4700198Z construct measurement rows=10 seats=20
+2026-11-06T03:35:17.4700470Z requested_bytes=280 allocations=11
+2026-11-06T03:35:17.4700719Z payload formula, PASS
+2026-11-06T03:35:17.4700937Z destroy measurement booked=0
+2026-11-06T03:35:17.4701191Z construct measurement rows=100 seats=200
+2026-11-06T03:35:17.4701468Z requested_bytes=20800 allocations=101
+2026-11-06T03:35:17.4701720Z payload formula, PASS
+2026-11-06T03:35:17.4701938Z destroy measurement booked=0
+2026-11-06T03:35:17.4702188Z construct measurement rows=1000 seats=2000
+2026-11-06T03:35:17.4702473Z requested_bytes=2008000 allocations=1001
+2026-11-06T03:35:17.4702742Z payload formula, PASS
+2026-11-06T03:35:17.4702962Z destroy measurement booked=0
+2026-11-06T03:35:17.4703228Z construct zero rows=0 seats=0
+2026-11-06T03:35:17.4703464Z zero row no allocations, PASS
+2026-11-06T03:35:17.4703695Z empty booking, PASS
+2026-11-06T03:35:17.4703902Z destroy zero booked=0
+2026-11-06T03:35:17.4704104Z negative rows, PASS
+2026-11-06T03:35:17.4704312Z Checks: 13 passed, 0 failed
+2026-11-06T03:35:17.4704468Z 
+2026-11-06T03:35:17.4704472Z 
+2026-11-06T03:35:17.4705784Z {"source": "main.cpp", "expected_leak": false, "exit": 0, "passed": true, "compile": "g++ -std=c++17 -Wall -Wextra -Wpedantic -O0 -g -fsanitize=address -fno-omit-frame-pointer -Iinclude Task03/main.cpp -o /home/runner/work/DSA01-192471006-Assignment3/DSA01-192471006-Assignment3/build/linux_leaks_main"}
+2026-11-06T03:35:17.4711162Z LINUX LEAK EXPERIMENT PASSED: missing delete detected; corrected Event clean.
+2026-11-06T03:35:17.4853472Z Cleaning up orphan processes
