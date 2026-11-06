@@ -1,0 +1,3 @@
+$ g++ -std=c++17 -Wall -Wextra -Wpedantic -Iinclude -g -fsanitize=address,undefined -fno-omit-frame-pointer -fno-elide-constructors Task06/text.cpp -o build/Task06_text_fnoelideconstructors_san
+
+exit_code=0

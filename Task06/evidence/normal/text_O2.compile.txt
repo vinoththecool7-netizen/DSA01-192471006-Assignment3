@@ -1,0 +1,3 @@
+$ g++ -std=c++17 -Wall -Wextra -Wpedantic -Iinclude -O2 Task06/text.cpp -o build/Task06_text_O2_normal
+
+exit_code=0

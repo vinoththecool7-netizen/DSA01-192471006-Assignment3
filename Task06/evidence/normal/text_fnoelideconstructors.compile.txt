@@ -1,0 +1,3 @@
+$ g++ -std=c++17 -Wall -Wextra -Wpedantic -Iinclude -fno-elide-constructors Task06/text.cpp -o build/Task06_text_fnoelideconstructors_normal
+
+exit_code=0

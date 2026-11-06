@@ -1,0 +1,51 @@
+{
+  "generated_utc": "2026-11-06T03:31:26.531181+00:00",
+  "platform": "macOS-27.2-arm64-arm-64bit-Mach-O",
+  "compiler": "Apple clang version 21.0.0 (clang-2100.4.1.1)\nTarget: arm64-apple-darwin27.2.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\n",
+  "asan_options": null,
+  "header_sha256": {
+    "include/check.hpp": "d5e71ec3bf1b3cc1a8639ce59e36dcfb0302a7977f55493946243438bbea6c10",
+    "Task06/text.hpp": "e2eeeac1e23acebd7a691afd1df6e94bc2a60c4475970c4747e4fa1faaf12f86"
+  },
+  "programs": [
+    {
+      "source": "Task06/text.cpp",
+      "sha256": "ed930cfaec4901544e3d36e377b89e7b3bec6a9acc46be834a12552f5f3a4720",
+      "compile": "g++ -std=c++17 -Wall -Wextra -Wpedantic -Iinclude -O0 Task06/text.cpp -o build/Task06_text_O0_normal",
+      "compile_exit": 0,
+      "expected_compile_failure": false,
+      "run": "build/Task06_text_O0_normal",
+      "stdin": "(embedded or no input)",
+      "run_exit": 0,
+      "expected_sanitizer_failure": false,
+      "matches_expected": null,
+      "passed": true
+    },
+    {
+      "source": "Task06/text.cpp",
+      "sha256": "ed930cfaec4901544e3d36e377b89e7b3bec6a9acc46be834a12552f5f3a4720",
+      "compile": "g++ -std=c++17 -Wall -Wextra -Wpedantic -Iinclude -O2 Task06/text.cpp -o build/Task06_text_O2_normal",
+      "compile_exit": 0,
+      "expected_compile_failure": false,
+      "run": "build/Task06_text_O2_normal",
+      "stdin": "(embedded or no input)",
+      "run_exit": 0,
+      "expected_sanitizer_failure": false,
+      "matches_expected": null,
+      "passed": true
+    },
+    {
+      "source": "Task06/text.cpp",
+      "sha256": "ed930cfaec4901544e3d36e377b89e7b3bec6a9acc46be834a12552f5f3a4720",
+      "compile": "g++ -std=c++17 -Wall -Wextra -Wpedantic -Iinclude -fno-elide-constructors Task06/text.cpp -o build/Task06_text_fnoelideconstructors_normal",
+      "compile_exit": 0,
+      "expected_compile_failure": false,
+      "run": "build/Task06_text_fnoelideconstructors_normal",
+      "stdin": "(embedded or no input)",
+      "run_exit": 0,
+      "expected_sanitizer_failure": false,
+      "matches_expected": null,
+      "passed": true
+    }
+  ]
+}

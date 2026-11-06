@@ -1,0 +1,51 @@
+{
+  "generated_utc": "2026-11-06T03:31:29.438768+00:00",
+  "platform": "macOS-27.2-arm64-arm-64bit-Mach-O",
+  "compiler": "Apple clang version 21.0.0 (clang-2100.4.1.1)\nTarget: arm64-apple-darwin27.2.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\n",
+  "asan_options": "detect_leaks=0:alloc_dealloc_mismatch=1",
+  "header_sha256": {
+    "include/check.hpp": "d5e71ec3bf1b3cc1a8639ce59e36dcfb0302a7977f55493946243438bbea6c10",
+    "Task06/text.hpp": "e2eeeac1e23acebd7a691afd1df6e94bc2a60c4475970c4747e4fa1faaf12f86"
+  },
+  "programs": [
+    {
+      "source": "Task06/text.cpp",
+      "sha256": "ed930cfaec4901544e3d36e377b89e7b3bec6a9acc46be834a12552f5f3a4720",
+      "compile": "g++ -std=c++17 -Wall -Wextra -Wpedantic -Iinclude -g -fsanitize=address,undefined -fno-omit-frame-pointer -O0 Task06/text.cpp -o build/Task06_text_O0_san",
+      "compile_exit": 0,
+      "expected_compile_failure": false,
+      "run": "build/Task06_text_O0_san",
+      "stdin": "(embedded or no input)",
+      "run_exit": 0,
+      "expected_sanitizer_failure": false,
+      "matches_expected": null,
+      "passed": true
+    },
+    {
+      "source": "Task06/text.cpp",
+      "sha256": "ed930cfaec4901544e3d36e377b89e7b3bec6a9acc46be834a12552f5f3a4720",
+      "compile": "g++ -std=c++17 -Wall -Wextra -Wpedantic -Iinclude -g -fsanitize=address,undefined -fno-omit-frame-pointer -O2 Task06/text.cpp -o build/Task06_text_O2_san",
+      "compile_exit": 0,
+      "expected_compile_failure": false,
+      "run": "build/Task06_text_O2_san",
+      "stdin": "(embedded or no input)",
+      "run_exit": 0,
+      "expected_sanitizer_failure": false,
+      "matches_expected": null,
+      "passed": true
+    },
+    {
+      "source": "Task06/text.cpp",
+      "sha256": "ed930cfaec4901544e3d36e377b89e7b3bec6a9acc46be834a12552f5f3a4720",
+      "compile": "g++ -std=c++17 -Wall -Wextra -Wpedantic -Iinclude -g -fsanitize=address,undefined -fno-omit-frame-pointer -fno-elide-constructors Task06/text.cpp -o build/Task06_text_fnoelideconstructors_san",
+      "compile_exit": 0,
+      "expected_compile_failure": false,
+      "run": "build/Task06_text_fnoelideconstructors_san",
+      "stdin": "(embedded or no input)",
+      "run_exit": 0,
+      "expected_sanitizer_failure": false,
+      "matches_expected": null,
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+a+b+c=ABC observed_copies=0
+concatenation, PASS
+plus on a by-value copy=AB observed_copies=2
+deep independent copy, PASS
+self assignment, PASS
+empty concatenation, PASS
+not equal, PASS
+long message, PASS
+null rejected, PASS
+independent_concatenations=100000 Text_ns=18136541 std_string_ns=28083250 checksum=1000000
+benchmark checksums, PASS
+Checks: 8 passed, 0 failed
