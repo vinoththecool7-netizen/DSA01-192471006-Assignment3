@@ -1,0 +1,36 @@
+name: Assignment 3 C++ verification
+on:
+  push:
+    paths:
+      - 'Task*/**.cpp'
+      - 'Task*/**.hpp'
+      - 'Task*/**.cpp.txt'
+      - 'include/**'
+      - 'scripts/validate.py'
+      - 'scripts/linux_leaks.py'
+      - '.github/workflows/validate.yml'
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Retrieve the exact source commit
+        shell: bash
+        run: |
+          git init .
+          git remote add origin "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY"
+          git fetch --depth=1 origin "$GITHUB_SHA"
+          git checkout --detach FETCH_HEAD
+      - name: Show compiler and runner
+        run: |
+          g++ --version
+          uname -a
+      - name: Compile and run ordinary experiments
+        run: python3 scripts/validate.py
+      - name: Run address and undefined behaviour experiments
+        run: python3 scripts/validate.py --sanitize
+      - name: Detect the missing delete and validate corrected cleanup
+        run: python3 scripts/linux_leaks.py
