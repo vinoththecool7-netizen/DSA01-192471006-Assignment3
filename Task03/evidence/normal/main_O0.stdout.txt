@@ -1,0 +1,31 @@
+construct stack rows=2 seats=3
+book, PASS
+duplicate booking, PASS
+construct block rows=1 seats=2
+construct heap rows=1 seats=1
+heap booking, PASS
+destroy heap booked=1
+destroy block booked=0
+cancel, PASS
+empty cancellation, PASS
+invalid seat, PASS
+destroy stack booked=0
+all scoped events destroyed, PASS
+construct measurement rows=10 seats=20
+requested_bytes=280 allocations=11
+payload formula, PASS
+destroy measurement booked=0
+construct measurement rows=100 seats=200
+requested_bytes=20800 allocations=101
+payload formula, PASS
+destroy measurement booked=0
+construct measurement rows=1000 seats=2000
+requested_bytes=2008000 allocations=1001
+payload formula, PASS
+destroy measurement booked=0
+construct zero rows=0 seats=0
+zero row no allocations, PASS
+empty booking, PASS
+destroy zero booked=0
+negative rows, PASS
+Checks: 13 passed, 0 failed

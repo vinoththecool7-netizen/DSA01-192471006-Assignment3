@@ -1,0 +1,4 @@
+$ g++ -std=c++17 -Wall -Wextra -fsanitize=leak -Iinclude Task03/missing_delete.cpp -o build/leak_probe
+clang++: error: unsupported option '-fsanitize=leak' for target 'arm64-apple-darwin27.2.0'
+
+exit_code=1

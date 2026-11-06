@@ -1,0 +1,11 @@
+$ g++ -std=c++17 -Wall -Wextra -Wpedantic -Iinclude -g -fsanitize=address,undefined -fno-omit-frame-pointer -O0 Task03/delete_mismatch_broken.cpp -o build/Task03_delete_mismatch_broken_O0_san
+Task03/delete_mismatch_broken.cpp:1:34: warning: 'delete' applied to a pointer that was allocated with 'new[]'; did you mean 'delete[]'? [-Wmismatched-new-delete]
+    1 | int main(){int* data=new int[10];delete data;} // Intentional mismatch; sanitizer demonstration only.
+      |                                  ^
+      |                                        []
+Task03/delete_mismatch_broken.cpp:1:22: note: allocated with 'new[]' here
+    1 | int main(){int* data=new int[10];delete data;} // Intentional mismatch; sanitizer demonstration only.
+      |                      ^
+1 warning generated.
+
+exit_code=0

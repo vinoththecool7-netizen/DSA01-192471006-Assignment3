@@ -1,0 +1,8 @@
+{
+  "compile_exit": 1,
+  "run_exit": -6,
+  "run": [
+    "/Users/vinothkumar/Documents/Codex/2026-10-19/referenced-chatgpt-conversation-this-is-an/assignment3/build/Task03_missing_delete_O0_san"
+  ],
+  "ASAN_OPTIONS": "detect_leaks=1"
+}

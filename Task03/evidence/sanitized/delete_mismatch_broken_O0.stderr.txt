@@ -1,0 +1,32 @@
+=================================================================
+==6150==ERROR: AddressSanitizer: alloc-dealloc-mismatch (operator new [] vs operator delete) on 0x604000000850
+==6150==WARNING: external symbolizer didn't start up correctly!
+==6150==WARNING: Can't read from symbolizer at fd 3
+==6150==WARNING: atos failed to symbolize address "0x105064558"
+==6150==WARNING: Can't read from symbolizer at fd 3
+==6150==WARNING: atos failed to symbolize address "0x10465479c"
+==6150==WARNING: Can't read from symbolizer at fd 3
+==6150==WARNING: atos failed to symbolize address "0x1872d0d78"
+    #0 0x000105064558 in _ZdlPv+0x74 (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/lib/darwin/libclang_rt.asan_osx_dynamic.dylib:arm64e+0x50558)
+    #1 0x00010465479c in main+0x9c (/Users/vinothkumar/Documents/Codex/2026-10-19/referenced-chatgpt-conversation-this-is-an/assignment3/build/Task03_delete_mismatch_broken_O0_san:arm64+0x10000079c)
+    #2 0x0001872d0d78 in start+0x19f8 (/usr/lib/dyld:arm64e+0x31d78)
+
+0x604000000850 is located 0 bytes inside of 40-byte region [0x604000000850,0x604000000878)
+allocated by thread T0 here:
+==6150==WARNING: Can't read from symbolizer at fd 3
+==6150==WARNING: atos failed to symbolize address "0x105064268"
+==6150==WARNING: Can't read from symbolizer at fd 3
+==6150==WARNING: atos failed to symbolize address "0x104654714"
+==6150==WARNING: Can't read from symbolizer at fd 3
+==6150==WARNING: atos failed to symbolize address "0x1872d0d78"
+    #0 0x000105064268 in _Znam+0x74 (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/lib/darwin/libclang_rt.asan_osx_dynamic.dylib:arm64e+0x50268)
+    #1 0x000104654714 in main+0x14 (/Users/vinothkumar/Documents/Codex/2026-10-19/referenced-chatgpt-conversation-this-is-an/assignment3/build/Task03_delete_mismatch_broken_O0_san:arm64+0x100000714)
+    #2 0x0001872d0d78 in start+0x19f8 (/usr/lib/dyld:arm64e+0x31d78)
+
+==6150==WARNING: Can't read from symbolizer at fd 3
+==6150==WARNING: atos failed to symbolize address "0x105064558"
+==6150==WARNING: Can't read from symbolizer at fd 3
+==6150==WARNING: atos failed to symbolize address "0x10465479c"
+SUMMARY: AddressSanitizer: alloc-dealloc-mismatch (/Users/vinothkumar/Documents/Codex/2026-10-19/referenced-chatgpt-conversation-this-is-an/assignment3/build/Task03_delete_mismatch_broken_O0_san:arm64+0x10000079c) in main+0x9c
+==6150==HINT: if you don't care about these errors you may set ASAN_OPTIONS=alloc_dealloc_mismatch=0
+==6150==ABORTING

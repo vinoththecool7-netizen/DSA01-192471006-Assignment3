@@ -1,0 +1,2 @@
+construct intentionally leaked rows=10 seats=20
+live events at exit=1 (delete deliberately omitted)

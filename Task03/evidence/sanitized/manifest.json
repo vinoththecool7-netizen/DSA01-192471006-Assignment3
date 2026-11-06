@@ -1,0 +1,64 @@
+{
+  "generated_utc": "2026-11-06T03:20:18.145565+00:00",
+  "platform": "macOS-27.2-arm64-arm-64bit-Mach-O",
+  "compiler": "Apple clang version 21.0.0 (clang-2100.4.1.1)\nTarget: arm64-apple-darwin27.2.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\n",
+  "asan_options": "detect_leaks=0:alloc_dealloc_mismatch=1",
+  "header_sha256": {
+    "include/check.hpp": "d5e71ec3bf1b3cc1a8639ce59e36dcfb0302a7977f55493946243438bbea6c10",
+    "Task03/seat_map.hpp": "18cc143ed9b49f3214bb09730406d772821826323c253085103616290c419d33"
+  },
+  "programs": [
+    {
+      "source": "Task03/delete_mismatch_broken.cpp",
+      "sha256": "46df5df09bf65ef359a674a2cb527412df2d1b173284137f5fde5eed15edd1c8",
+      "compile": "g++ -std=c++17 -Wall -Wextra -Wpedantic -Iinclude -g -fsanitize=address,undefined -fno-omit-frame-pointer -O0 Task03/delete_mismatch_broken.cpp -o build/Task03_delete_mismatch_broken_O0_san",
+      "compile_exit": 0,
+      "expected_compile_failure": false,
+      "run": "build/Task03_delete_mismatch_broken_O0_san",
+      "stdin": "(embedded or no input)",
+      "run_exit": -6,
+      "expected_sanitizer_failure": true,
+      "matches_expected": null,
+      "passed": true
+    },
+    {
+      "source": "Task03/logger.cpp",
+      "sha256": "dacccbe34db48119685381eb68bb14ff0125b4e34d303e7f326a19017a8ff3d1",
+      "compile": "g++ -std=c++17 -Wall -Wextra -Wpedantic -Iinclude -g -fsanitize=address,undefined -fno-omit-frame-pointer -O0 Task03/logger.cpp -o build/Task03_logger_O0_san",
+      "compile_exit": 0,
+      "expected_compile_failure": false,
+      "run": "build/Task03_logger_O0_san",
+      "stdin": "(embedded or no input)",
+      "run_exit": 0,
+      "expected_sanitizer_failure": false,
+      "matches_expected": true,
+      "passed": true
+    },
+    {
+      "source": "Task03/main.cpp",
+      "sha256": "380dd4814d79676d747272ac0ba198556e340f36ab2e80a0e912eb651b2b29b1",
+      "compile": "g++ -std=c++17 -Wall -Wextra -Wpedantic -Iinclude -g -fsanitize=address,undefined -fno-omit-frame-pointer -O0 Task03/main.cpp -o build/Task03_main_O0_san",
+      "compile_exit": 0,
+      "expected_compile_failure": false,
+      "run": "build/Task03_main_O0_san",
+      "stdin": "(embedded or no input)",
+      "run_exit": 0,
+      "expected_sanitizer_failure": false,
+      "matches_expected": null,
+      "passed": true
+    },
+    {
+      "source": "Task03/missing_delete.cpp",
+      "sha256": "485fa45b31503a33d8d591367c9c264636280acc2a55b6672adf3f88831cb081",
+      "compile": "g++ -std=c++17 -Wall -Wextra -Wpedantic -Iinclude -g -fsanitize=address,undefined -fno-omit-frame-pointer -O0 Task03/missing_delete.cpp -o build/Task03_missing_delete_O0_san",
+      "compile_exit": 0,
+      "expected_compile_failure": false,
+      "run": "build/Task03_missing_delete_O0_san",
+      "stdin": "(embedded or no input)",
+      "run_exit": 0,
+      "expected_sanitizer_failure": false,
+      "matches_expected": null,
+      "passed": true
+    }
+  ]
+}
