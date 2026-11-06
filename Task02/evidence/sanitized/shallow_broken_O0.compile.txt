@@ -1,0 +1,3 @@
+$ g++ -std=c++17 -Wall -Wextra -Wpedantic -Iinclude -g -fsanitize=address,undefined -fno-omit-frame-pointer -O0 Task02/shallow_broken.cpp -o build/Task02_shallow_broken_O0_san
+
+exit_code=0

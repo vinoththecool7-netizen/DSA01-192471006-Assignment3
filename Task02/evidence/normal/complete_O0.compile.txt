@@ -1,0 +1,3 @@
+$ g++ -std=c++17 -Wall -Wextra -Wpedantic -Iinclude -O0 Task02/complete.cpp -o build/Task02_complete_O0_normal
+
+exit_code=0

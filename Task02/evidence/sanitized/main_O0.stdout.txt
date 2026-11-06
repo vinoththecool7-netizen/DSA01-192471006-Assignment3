@@ -1,0 +1,16 @@
+copy independent, PASS
+assignment independent, PASS
+self assignment, PASS
+value parameter data, PASS
+by value copies=1
+one copy by value, PASS
+reference parameter data, PASS
+const reference copies=0
+zero copies by reference, PASS
+negative count, PASS
+negative index, PASS
+empty prescription, PASS
+copy medicines=10 repetitions=5 total_ns=6334 checksum=50
+copy medicines=1000 repetitions=5 total_ns=347709 checksum=60
+copy medicines=100000 repetitions=5 total_ns=36386791 checksum=70
+Checks: 10 passed, 0 failed

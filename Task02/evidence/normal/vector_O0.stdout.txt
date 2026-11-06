@@ -1,0 +1,2 @@
+Rule of Zero independent copy, PASS
+Checks: 1 passed, 0 failed

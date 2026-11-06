@@ -1,0 +1,87 @@
+=================================================================
+==6122==ERROR: AddressSanitizer: heap-use-after-free on address 0x606000000688 at pc 0x0001028ef69c bp 0x00016d511f90 sp 0x00016d511f88
+READ of size 8 at 0x606000000688 thread T0
+==6122==WARNING: external symbolizer didn't start up correctly!
+==6122==WARNING: Can't read from symbolizer at fd 3
+==6122==WARNING: atos failed to symbolize address "0x1028ef698"
+==6122==WARNING: Can't read from symbolizer at fd 3
+==6122==WARNING: atos failed to symbolize address "0x1028ee8a0"
+==6122==WARNING: Can't read from symbolizer at fd 3
+==6122==WARNING: atos failed to symbolize address "0x1028ed200"
+==6122==WARNING: Can't read from symbolizer at fd 3
+==6122==WARNING: atos failed to symbolize address "0x1872d0d78"
+    #0 0x0001028ef698 in Prescription::~Prescription()+0xdc (/Users/vinothkumar/Documents/Codex/2026-10-19/referenced-chatgpt-conversation-this-is-an/assignment3/build/Task02_without_copy_broken_O0_san:arm64+0x100003698)
+    #1 0x0001028ee8a0 in Prescription::~Prescription()+0x50 (/Users/vinothkumar/Documents/Codex/2026-10-19/referenced-chatgpt-conversation-this-is-an/assignment3/build/Task02_without_copy_broken_O0_san:arm64+0x1000028a0)
+    #2 0x0001028ed200 in main+0x920 (/Users/vinothkumar/Documents/Codex/2026-10-19/referenced-chatgpt-conversation-this-is-an/assignment3/build/Task02_without_copy_broken_O0_san:arm64+0x100001200)
+    #3 0x0001872d0d78 in start+0x19f8 (/usr/lib/dyld:arm64e+0x31d78)
+
+0x606000000688 is located 8 bytes inside of 64-byte region [0x606000000680,0x6060000006c0)
+freed by thread T0 here:
+==6122==WARNING: Can't read from symbolizer at fd 3
+==6122==WARNING: atos failed to symbolize address "0x1031bc644"
+==6122==WARNING: Can't read from symbolizer at fd 3
+==6122==WARNING: atos failed to symbolize address "0x1028ef6f4"
+==6122==WARNING: Can't read from symbolizer at fd 3
+==6122==WARNING: atos failed to symbolize address "0x1028ee8a0"
+==6122==WARNING: Can't read from symbolizer at fd 3
+==6122==WARNING: atos failed to symbolize address "0x1028ed1e8"
+==6122==WARNING: Can't read from symbolizer at fd 3
+==6122==WARNING: atos failed to symbolize address "0x1872d0d78"
+    #0 0x0001031bc644 in _ZdaPv+0x74 (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/lib/darwin/libclang_rt.asan_osx_dynamic.dylib:arm64e+0x50644)
+    #1 0x0001028ef6f4 in Prescription::~Prescription()+0x138 (/Users/vinothkumar/Documents/Codex/2026-10-19/referenced-chatgpt-conversation-this-is-an/assignment3/build/Task02_without_copy_broken_O0_san:arm64+0x1000036f4)
+    #2 0x0001028ee8a0 in Prescription::~Prescription()+0x50 (/Users/vinothkumar/Documents/Codex/2026-10-19/referenced-chatgpt-conversation-this-is-an/assignment3/build/Task02_without_copy_broken_O0_san:arm64+0x1000028a0)
+    #3 0x0001028ed1e8 in main+0x908 (/Users/vinothkumar/Documents/Codex/2026-10-19/referenced-chatgpt-conversation-this-is-an/assignment3/build/Task02_without_copy_broken_O0_san:arm64+0x1000011e8)
+    #4 0x0001872d0d78 in start+0x19f8 (/usr/lib/dyld:arm64e+0x31d78)
+
+previously allocated by thread T0 here:
+==6122==WARNING: Can't read from symbolizer at fd 3
+==6122==WARNING: atos failed to symbolize address "0x1031bc268"
+==6122==WARNING: Can't read from symbolizer at fd 3
+==6122==WARNING: atos failed to symbolize address "0x1028ee9bc"
+==6122==WARNING: Can't read from symbolizer at fd 3
+==6122==WARNING: atos failed to symbolize address "0x1028ed6f4"
+==6122==WARNING: Can't read from symbolizer at fd 3
+==6122==WARNING: atos failed to symbolize address "0x1028ecb04"
+==6122==WARNING: Can't read from symbolizer at fd 3
+==6122==WARNING: atos failed to symbolize address "0x1872d0d78"
+    #0 0x0001031bc268 in _Znam+0x74 (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/lib/darwin/libclang_rt.asan_osx_dynamic.dylib:arm64e+0x50268)
+    #1 0x0001028ee9bc in Prescription::Prescription(int)+0x108 (/Users/vinothkumar/Documents/Codex/2026-10-19/referenced-chatgpt-conversation-this-is-an/assignment3/build/Task02_without_copy_broken_O0_san:arm64+0x1000029bc)
+    #2 0x0001028ed6f4 in Prescription::Prescription(int)+0x58 (/Users/vinothkumar/Documents/Codex/2026-10-19/referenced-chatgpt-conversation-this-is-an/assignment3/build/Task02_without_copy_broken_O0_san:arm64+0x1000016f4)
+    #3 0x0001028ecb04 in main+0x224 (/Users/vinothkumar/Documents/Codex/2026-10-19/referenced-chatgpt-conversation-this-is-an/assignment3/build/Task02_without_copy_broken_O0_san:arm64+0x100000b04)
+    #4 0x0001872d0d78 in start+0x19f8 (/usr/lib/dyld:arm64e+0x31d78)
+
+==6122==WARNING: Can't read from symbolizer at fd 3
+==6122==WARNING: atos failed to symbolize address "0x1028ef698"
+SUMMARY: AddressSanitizer: heap-use-after-free (/Users/vinothkumar/Documents/Codex/2026-10-19/referenced-chatgpt-conversation-this-is-an/assignment3/build/Task02_without_copy_broken_O0_san:arm64+0x100003698) in Prescription::~Prescription()+0xdc
+Shadow bytes around the buggy address:
+  0x606000000400: fd fd fd fa fa fa fa fa fd fd fd fd fd fd fd fd
+  0x606000000480: fa fa fa fa fd fd fd fd fd fd fd fd fa fa fa fa
+  0x606000000500: 00 00 00 00 00 00 00 00 fa fa fa fa 00 00 00 00
+  0x606000000580: 00 00 02 fa fa fa fa fa 00 00 00 00 00 00 00 00
+  0x606000000600: fa fa fa fa 00 00 00 00 00 00 06 fa fa fa fa fa
+=>0x606000000680: fd[fd]fd fd fd fd fd fd fa fa fa fa fd fd fd fd
+  0x606000000700: fd fd fd fd fa fa fa fa fa fa fa fa fa fa fa fa
+  0x606000000780: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x606000000800: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x606000000880: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x606000000900: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==6122==ABORTING

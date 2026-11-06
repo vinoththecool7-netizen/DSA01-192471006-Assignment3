@@ -1,0 +1,77 @@
+{
+  "generated_utc": "2026-11-06T03:20:12.680209+00:00",
+  "platform": "macOS-27.2-arm64-arm-64bit-Mach-O",
+  "compiler": "Apple clang version 21.0.0 (clang-2100.4.1.1)\nTarget: arm64-apple-darwin27.2.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\n",
+  "asan_options": "detect_leaks=0:alloc_dealloc_mismatch=1",
+  "header_sha256": {
+    "include/check.hpp": "d5e71ec3bf1b3cc1a8639ce59e36dcfb0302a7977f55493946243438bbea6c10",
+    "Task02/prescription.hpp": "b1e94e6364f76ea76dc88e29f652e68d5900b004cd44e91b6f34bbfd7c767927"
+  },
+  "programs": [
+    {
+      "source": "Task02/complete.cpp",
+      "sha256": "54f3c81a8e29c870c666e1ff1ba0acce6d741b475ae13fedfd8b6ecfb7544681",
+      "compile": "g++ -std=c++17 -Wall -Wextra -Wpedantic -Iinclude -g -fsanitize=address,undefined -fno-omit-frame-pointer -O0 Task02/complete.cpp -o build/Task02_complete_O0_san",
+      "compile_exit": 0,
+      "expected_compile_failure": false,
+      "run": "build/Task02_complete_O0_san",
+      "stdin": "(embedded or no input)",
+      "run_exit": 0,
+      "expected_sanitizer_failure": false,
+      "matches_expected": true,
+      "passed": true
+    },
+    {
+      "source": "Task02/main.cpp",
+      "sha256": "e88b1c478fb6109352380122a4896e94d8905c0b4ec6a5340b935988127a6d46",
+      "compile": "g++ -std=c++17 -Wall -Wextra -Wpedantic -Iinclude -g -fsanitize=address,undefined -fno-omit-frame-pointer -O0 Task02/main.cpp -o build/Task02_main_O0_san",
+      "compile_exit": 0,
+      "expected_compile_failure": false,
+      "run": "build/Task02_main_O0_san",
+      "stdin": "(embedded or no input)",
+      "run_exit": 0,
+      "expected_sanitizer_failure": false,
+      "matches_expected": null,
+      "passed": true
+    },
+    {
+      "source": "Task02/shallow_broken.cpp",
+      "sha256": "6306b763a48cecd455983de7c2f3902218a8d0dbda9b03f4a3a69f2ec519ef3e",
+      "compile": "g++ -std=c++17 -Wall -Wextra -Wpedantic -Iinclude -g -fsanitize=address,undefined -fno-omit-frame-pointer -O0 Task02/shallow_broken.cpp -o build/Task02_shallow_broken_O0_san",
+      "compile_exit": 0,
+      "expected_compile_failure": false,
+      "run": "build/Task02_shallow_broken_O0_san",
+      "stdin": "(embedded or no input)",
+      "run_exit": -6,
+      "expected_sanitizer_failure": true,
+      "matches_expected": null,
+      "passed": true
+    },
+    {
+      "source": "Task02/vector.cpp",
+      "sha256": "6d519b54c0710d245f2efdf2b8f26248d9dd5e016267e38663c101d75da1fad3",
+      "compile": "g++ -std=c++17 -Wall -Wextra -Wpedantic -Iinclude -g -fsanitize=address,undefined -fno-omit-frame-pointer -O0 Task02/vector.cpp -o build/Task02_vector_O0_san",
+      "compile_exit": 0,
+      "expected_compile_failure": false,
+      "run": "build/Task02_vector_O0_san",
+      "stdin": "(embedded or no input)",
+      "run_exit": 0,
+      "expected_sanitizer_failure": false,
+      "matches_expected": null,
+      "passed": true
+    },
+    {
+      "source": "Task02/without_copy_broken.cpp",
+      "sha256": "d49803af0bbb1fdbf0f6936816d34379b39a5340d70e1809f76999bb67592761",
+      "compile": "g++ -std=c++17 -Wall -Wextra -Wpedantic -Iinclude -g -fsanitize=address,undefined -fno-omit-frame-pointer -O0 Task02/without_copy_broken.cpp -o build/Task02_without_copy_broken_O0_san",
+      "compile_exit": 0,
+      "expected_compile_failure": false,
+      "run": "build/Task02_without_copy_broken_O0_san",
+      "stdin": "(embedded or no input)",
+      "run_exit": -6,
+      "expected_sanitizer_failure": true,
+      "matches_expected": null,
+      "passed": true
+    }
+  ]
+}
