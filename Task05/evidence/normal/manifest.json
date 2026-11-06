@@ -1,0 +1,64 @@
+{
+  "generated_utc": "2026-11-06T03:29:37.042542+00:00",
+  "platform": "macOS-27.2-arm64-arm-64bit-Mach-O",
+  "compiler": "Apple clang version 21.0.0 (clang-2100.4.1.1)\nTarget: arm64-apple-darwin27.2.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\n",
+  "asan_options": null,
+  "header_sha256": {
+    "include/check.hpp": "d5e71ec3bf1b3cc1a8639ce59e36dcfb0302a7977f55493946243438bbea6c10",
+    "Task05/playback.hpp": "116d7b528839c5ec6709f3895a815f9f8773293f1ef8d58cef40e497c62345d0"
+  },
+  "programs": [
+    {
+      "source": "Task05/benchmark.cpp",
+      "sha256": "5003030ba38cb9979d7d465a78451404fa1599bfbe0c47f8968ec64d926fd3d6",
+      "compile": "g++ -std=c++17 -Wall -Wextra -Wpedantic -Iinclude -O0 Task05/benchmark.cpp -o build/Task05_benchmark_O0_normal",
+      "compile_exit": 0,
+      "expected_compile_failure": false,
+      "run": "build/Task05_benchmark_O0_normal",
+      "stdin": "(embedded or no input)",
+      "run_exit": 0,
+      "expected_sanitizer_failure": false,
+      "matches_expected": null,
+      "passed": true
+    },
+    {
+      "source": "Task05/benchmark.cpp",
+      "sha256": "5003030ba38cb9979d7d465a78451404fa1599bfbe0c47f8968ec64d926fd3d6",
+      "compile": "g++ -std=c++17 -Wall -Wextra -Wpedantic -Iinclude -O2 Task05/benchmark.cpp -o build/Task05_benchmark_O2_normal",
+      "compile_exit": 0,
+      "expected_compile_failure": false,
+      "run": "build/Task05_benchmark_O2_normal",
+      "stdin": "(embedded or no input)",
+      "run_exit": 0,
+      "expected_sanitizer_failure": false,
+      "matches_expected": null,
+      "passed": true
+    },
+    {
+      "source": "Task05/counter.cpp",
+      "sha256": "0b759c096ad5c724d5137678dd7192fdc8c2fb9e6478e2266b84eae176f9df5a",
+      "compile": "g++ -std=c++17 -Wall -Wextra -Wpedantic -Iinclude -O0 Task05/counter.cpp -o build/Task05_counter_O0_normal",
+      "compile_exit": 0,
+      "expected_compile_failure": false,
+      "run": "build/Task05_counter_O0_normal",
+      "stdin": "(embedded or no input)",
+      "run_exit": 0,
+      "expected_sanitizer_failure": false,
+      "matches_expected": true,
+      "passed": true
+    },
+    {
+      "source": "Task05/main.cpp",
+      "sha256": "60376361c709ba10f1b30366ed032d7a6dc4772ec44da641fafc673f3147cf40",
+      "compile": "g++ -std=c++17 -Wall -Wextra -Wpedantic -Iinclude -O0 Task05/main.cpp -o build/Task05_main_O0_normal",
+      "compile_exit": 0,
+      "expected_compile_failure": false,
+      "run": "build/Task05_main_O0_normal",
+      "stdin": "(embedded or no input)",
+      "run_exit": 0,
+      "expected_sanitizer_failure": false,
+      "matches_expected": null,
+      "passed": true
+    }
+  ]
+}
