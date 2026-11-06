@@ -1,0 +1,25 @@
+{
+  "generated_utc": "2026-11-06T03:29:43.623380+00:00",
+  "platform": "macOS-27.2-arm64-arm-64bit-Mach-O",
+  "compiler": "Apple clang version 21.0.0 (clang-2100.4.1.1)\nTarget: arm64-apple-darwin27.2.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\n",
+  "asan_options": "detect_leaks=0:alloc_dealloc_mismatch=1",
+  "header_sha256": {
+    "include/check.hpp": "d5e71ec3bf1b3cc1a8639ce59e36dcfb0302a7977f55493946243438bbea6c10",
+    "Task07/complex.hpp": "3b116420870d06caecc9bb6378a96c9c0e68014556889580b0dcb53d24aa1087"
+  },
+  "programs": [
+    {
+      "source": "Task07/main.cpp",
+      "sha256": "e2a3fff35dbb6ea76d0c2ba14d7feb9d425df8fc5d5c5ba5803932095246efaa",
+      "compile": "g++ -std=c++17 -Wall -Wextra -Wpedantic -Iinclude -g -fsanitize=address,undefined -fno-omit-frame-pointer -O0 Task07/main.cpp -o build/Task07_main_O0_san",
+      "compile_exit": 0,
+      "expected_compile_failure": false,
+      "run": "build/Task07_main_O0_san",
+      "stdin": "(embedded or no input)",
+      "run_exit": 0,
+      "expected_sanitizer_failure": false,
+      "matches_expected": null,
+      "passed": true
+    }
+  ]
+}

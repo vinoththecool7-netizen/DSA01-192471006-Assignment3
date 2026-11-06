@@ -1,0 +1,14 @@
+omega=1000 R=100 L=0.05 C=1e-05
+series 100 - 50j magnitude=111.803398875
+parallel 50 + 50j magnitude=70.7106781187
+series hand calculation, PASS
+parallel hand calculation, PASS
+series std complex, PASS
+parallel std complex, PASS
+default and real constructors, PASS
+zero division, PASS
+singular parallel, PASS
+nonfinite input, PASS
+4000 arithmetic reference comparisons, PASS
+reference_mismatches=0 sizeof Complex=16 sizeof std::complex<double>=16
+Checks: 9 passed, 0 failed
