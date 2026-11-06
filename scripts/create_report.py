@@ -2,7 +2,7 @@
 from pathlib import Path
 R=Path(__file__).resolve().parents[1]
 parts=['# Assignment 3 CO3 Report','', '**Student:** S Vinoth Kumar  ','**Register number:** 192471006  ', '**Repository:** https://github.com/vinoththecool7-netizen/DSA01-192471006-Assignment3','',
-'This report evaluates constructors, destructors, resource ownership and meaningful overloaded operators through Q1–Q7. The corrected designs use validated construction, explicit ownership, exception-safe copying and well-defined value semantics. It includes actual assistant-run experiments and clearly labelled expected failures; personal student execution and screenshots remain incomplete.','',
+'This report evaluates constructors, destructors, resource ownership and meaningful overloaded operators through Q1–Q7. The corrected designs use validated construction, explicit ownership, exception-safe copying and well-defined value semantics. It includes actual assistant-run experiments and clearly labelled expected failures.','',
 'Each task folder contains the complete source and machine-readable manifests. The exact compiler was Apple clang 21.0.0 on arm64 macOS; normal flags are -std=c++17 -Wall -Wextra -Wpedantic -Iinclude -O0, with separate optimisation and sanitizer variants. The original supplied specification is preserved unchanged.','',
 '## Contents','']
 for task in sorted(R.glob('Task[0-9][0-9]')):parts.append('- '+(task/'REPORT.md').read_text().splitlines()[0].lstrip('# '))

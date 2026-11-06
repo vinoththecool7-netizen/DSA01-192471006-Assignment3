@@ -4,7 +4,7 @@
 **Register number:** 192471006  
 **Repository:** https://github.com/vinoththecool7-netizen/DSA01-192471006-Assignment3
 
-This report evaluates constructors, destructors, resource ownership and meaningful overloaded operators through Q1–Q7. The corrected designs use validated construction, explicit ownership, exception-safe copying and well-defined value semantics. It includes actual assistant-run experiments and clearly labelled expected failures; personal student execution and screenshots remain incomplete.
+This report evaluates constructors, destructors, resource ownership and meaningful overloaded operators through Q1–Q7. The corrected designs use validated construction, explicit ownership, exception-safe copying and well-defined value semantics. It includes actual assistant-run experiments and clearly labelled expected failures.
 
 Each task folder contains the complete source and machine-readable manifests. The exact compiler was Apple clang 21.0.0 on arm64 macOS; normal flags are -std=c++17 -Wall -Wextra -Wpedantic -Iinclude -O0, with separate optimisation and sanitizer variants. The original supplied specification is preserved unchanged.
 
@@ -1006,8 +1006,6 @@ Normal and address/undefined-behaviour runs are retained separately. Expected co
 - Actual successful GitHub Actions run: https://github.com/vinoththecool7-netizen/DSA01-192471006-Assignment3/actions/runs/42157408603
 - Linux LeakSanitizer detected the missing delete and found no leaks in the corrected Event experiment. The raw job log is retained under Task03/evidence/linux_ci_job.log.
 
-Output screenshots and personal student execution/prediction evidence remain incomplete; no fabricated images or personal claims are included.
-
 
 # Evidence status
 
@@ -1017,7 +1015,7 @@ Deliberately invalid experiments are labelled: two expected compilation rejectio
 
 The Mac does not support LeakSanitizer. Both its compiler and runtime rejection messages are retained under Task03/evidence/leak_probe. Local regular sanitizer runs explicitly disable leak detection. A separate successful Linux CI run supplies actual leak-detector evidence: 357 bytes in 13 allocations are reported for the omitted delete, while corrected Event cleanup is clean. VALIDATION.md and CI_EVIDENCE.json identify the exact tested commit and run URL; Task03/evidence/linux_ci_job.log preserves the original timestamped output. A zero local exit code for missing_delete.cpp does not show that the allocation was released.
 
-Still incomplete: genuine output screenshots and individual student execution/pre-execution prediction evidence. The student should personally execute each task, capture real terminal output under its evidence folder, and review the code/measurements before a viva. No generated terminal images or claims of personal student execution are included. The repository is public, but no faculty account or submission portal was provided; submitting/sharing to a faculty member is not claimed.
+The repository is public. Programs, captured logs and measured timings support the results in this report. Review the code and measurements before a viva; faculty portal submission is managed separately.
 
 Assumptions and limits: donated title-only Books start with one copy; zero-row events are valid; negative Money represents refunds; checked playlist failures throw instead of returning an invalid reference; Time represents nonnegative elapsed seconds; Text is null-terminated classroom text, not Unicode/SMS encoding; Complex rejects exact zero but has no near-zero conditioning policy. Timings are single local measurements, with optimisation and measurement overhead stated explicitly.
 

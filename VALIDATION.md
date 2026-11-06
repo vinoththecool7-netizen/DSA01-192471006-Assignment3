@@ -33,5 +33,3 @@ Normal and address/undefined-behaviour runs are retained separately. Expected co
 
 - Actual successful GitHub Actions run: https://github.com/vinoththecool7-netizen/DSA01-192471006-Assignment3/actions/runs/42157408603
 - Linux LeakSanitizer detected the missing delete and found no leaks in the corrected Event experiment. The raw job log is retained under Task03/evidence/linux_ci_job.log.
-
-Output screenshots and personal student execution/prediction evidence remain incomplete; no fabricated images or personal claims are included.

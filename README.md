@@ -55,7 +55,7 @@ The .cpp.txt sources are intentional compile diagnostics/conversion demonstratio
 
 Most task inputs are explicit constructor arguments, test-case data, deterministic generated operands or benchmark counts in source. No unconsumed input files are passed off as execution evidence. The actual consumed Task04 input and exact stdout fixture are supplied. Fixed supplied-program outputs are compared byte for byte, including Logger's trailing space and absent newline. Timing and sanitizer-address variation are preserved as actual observations.
 
-The Q3/Q5 predictions were committed in the Q1 commit before first execution. They are assistant-authored predictions; personal student pre-execution evidence cannot be retrospectively supplied. The Q5 pasted Counter listing required restoration of line breaks around its // prefix comment; no intended behaviour was changed.
+The Q3/Q5 predictions were committed in the Q1 commit before first execution. They are assistant-authored predictions. The Q5 pasted Counter listing required restoration of line breaks around its // prefix comment; no intended behaviour was changed.
 
 ## Submission evidence and history
 

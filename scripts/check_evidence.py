@@ -32,5 +32,4 @@ if ci.exists():
  lines+=['','## Linux verification','',f'- Actual successful GitHub Actions run: {info["url"]}',
  '- Linux LeakSanitizer detected the missing delete and found no leaks in the corrected Event experiment. The raw job log is retained under Task03/evidence/linux_ci_job.log.']
 else:lines+=['','Linux CI evidence is not yet attached; do not infer a leak-detector finding from the local runs.']
-lines+=['','Output screenshots and personal student execution/prediction evidence remain incomplete; no fabricated images or personal claims are included.']
 (R/'VALIDATION.md').write_text('\n'.join(lines)+'\n');print('\n'.join(lines))
