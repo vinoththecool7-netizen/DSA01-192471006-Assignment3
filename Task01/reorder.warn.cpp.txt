@@ -1,0 +1,6 @@
+#include <iostream>
+struct WrongOrder {
+ int first;int second;
+ WrongOrder():second{2},first{1}{} // Actual order is first, second; no uninitialised read.
+};
+int main(){WrongOrder x;std::cout<<x.first<<' '<<x.second<<'\n';}

@@ -1,0 +1,16 @@
+$ g++ -std=c++17 -Wall -Wextra -Wpedantic -Iinclude -g -fsanitize=address,undefined -fno-omit-frame-pointer -O0 -x c++ Task01/no_default.fail.cpp.txt -o build/Task01_no_default.fail_O0_san
+Task01/no_default.fail.cpp.txt:3:17: error: no matching constructor for initialization of 'Book[3]'
+    3 | int main(){Book books[3];}
+      |                 ^
+Task01/no_default.fail.cpp.txt:2:43: note: candidate constructor not viable: requires single argument 't', but no arguments were provided
+    2 | struct Book { std::string title; explicit Book(std::string t):title{t}{} };
+      |                                           ^    ~~~~~~~~~~~~~
+Task01/no_default.fail.cpp.txt:2:8: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 0 were provided
+    2 | struct Book { std::string title; explicit Book(std::string t):title{t}{} };
+      |        ^~~~
+Task01/no_default.fail.cpp.txt:2:8: note: candidate constructor (the implicit move constructor) not viable: requires 1 argument, but 0 were provided
+    2 | struct Book { std::string title; explicit Book(std::string t):title{t}{} };
+      |        ^~~~
+1 error generated.
+
+exit_code=1

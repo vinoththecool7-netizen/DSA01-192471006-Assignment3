@@ -1,0 +1,4 @@
+#include <string>
+struct Book {std::string title;explicit Book(std::string t):title{t}{}};
+void accept(Book){}
+int main(){accept(std::string{"Title"});}

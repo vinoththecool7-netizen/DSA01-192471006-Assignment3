@@ -1,0 +1,3 @@
+$ g++ -std=c++17 -Wall -Wextra -Wpedantic -Iinclude -O0 -x c++ Task01/implicit.ok.cpp.txt -o build/Task01_implicit.ok_O0_normal
+
+exit_code=0

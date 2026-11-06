@@ -1,0 +1,8 @@
+$ g++ -std=c++17 -Wall -Wextra -Wpedantic -Iinclude -g -fsanitize=address,undefined -fno-omit-frame-pointer -O0 -x c++ Task01/reorder.warn.cpp.txt -o build/Task01_reorder.warn_O0_san
+Task01/reorder.warn.cpp.txt:4:15: warning: field 'second' will be initialized after field 'first' [-Wreorder-ctor]
+    4 |  WrongOrder():second{2},first{1}{} // Actual order is first, second; no uninitialised read.
+      |               ^~~~~~~~~ ~~~~~~~~
+      |               first{1}  second{2}
+1 warning generated.
+
+exit_code=0

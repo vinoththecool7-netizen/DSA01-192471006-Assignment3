@@ -1,0 +1,268 @@
+ASSIGNMENT 3 – CO3 
+CO3 Coverage: Construct C++ programs using constructors, destructors and operator  overloading to control object creation, destruction and operator behaviour – default,  parameterised, overloaded, copy and dynamic constructors, destructors, defining and  overloading operators, and the rules for operator overloading. 
+
+Bloom’s Levels Assessed: K5 – Evaluate (every task in this assignment is at K5 level) Mandatory Execution and GitHub Submission 
+• Create a GitHub repository named DSA01-<RegisterNumber>-Assignment3 and  share it with the course faculty (public, or private with the faculty added as a collaborator). 
+• Keep one folder for each task (for example: Task01, Task02 … or Q1, Q2 …),  containing the C++ source files, input files and output screenshots. 
+• Include a README.md with your name, register number, compiler and version (for  example g++ 13), the exact g++ command used to compile (for example g++ -std=c++17 - Wall -Wextra), the steps to run each program, and a short note of the result of each task. 
+• Commit your work progressively – at least one commit for each task. The commit  history will be checked; a single upload of all files on the last day will not be accepted. 
+• Submit the GitHub link below and on the cover page of your report. An assignment  submitted without a working GitHub link will not be evaluated. 
+GitHub Repository Link: __________________________________________________ How to Answer the Additional Questions 
+Complete the Code: Copy the given code into your repository, replace every TODO with  working code without changing the rest of the program, execute it and compare your output  with the expected output. 
+Predict the Output: Write the exact output of the given program before running it. Then run it  and explain every difference between your prediction and the actual output, using the C++  rules involved. Predictions written after running the program will not be credited.
+Alternative Concept and Complexity Analysis: Describe how the solution would change if the  alternative concept were used, with code or pseudocode, and analyse and compare the time  complexity and space complexity of both solutions using Big-O notation, supported by your  own measurements wherever possible. 
+Assignment Principle 
+Every question asks you to design, implement, analyse and evaluate the solution yourself, so  that you demonstrate evidence of: 
+Design → Implementation → Analysis → Evaluation 
+Q1 – Constructors and Constructor Overloading 6 Marks 
+Bloom’s Level: K5 – Evaluate 
+Problem Context – Library Book Records 
+A library creates Book objects in several situations: a new book with full details, a donated  book with only a title, and an empty record that will be filled later. Some records were  created with garbage values in the number of copies. 
+Implementation Tasks 
+You must: 
+• Write a default constructor, a parameterised constructor and overloaded constructors  for the three situations 
+• Use a member initializer list in every constructor 
+• Use constructor delegation to avoid repeating code 
+• Show that no Book can be created with an invalid number of copies 
+Design & Analysis 
+You must: 
+• Explain when the compiler supplies a default constructor and when it does not 
+• Explain why member initializer lists are preferred to assignment inside the constructor  body 
+• Explain the order in which members are initialised (declaration order, not list order) • Draw the state of three objects after construction
+Experimental Investigation 
+You must: 
+• Create Book objects with every constructor and print them 
+• Remove the default constructor and record the compiler error when an array of Books  is created 
+• Demonstrate a member initialised in the wrong order and the -Wreorder warning • Test a negative number of copies 
+Design Question 
+When should a constructor be marked explicit? Show a call that compiles without explicit  and fails with it. 
+Alternative Concept and Complexity Analysis 
+If one constructor with default arguments (Book(std::string t = "", int copies = 0, …)) were  used instead of several overloaded constructors and delegation, what would the solution be?  Analyse the time and space of object creation (O(1) in both) and compare which design  checks the number of copies in fewer places. 
+Q2 – Copy Constructors: Shallow and Deep Copies 7 Marks 
+Bloom’s Level: K5 – Evaluate 
+Problem Context – Hospital Prescription Records 
+A Prescription object holds a dynamically allocated array of medicine names. When a doctor  copies a prescription to modify it for a follow-up visit, the original prescription also changes,  and the program sometimes crashes when it ends. 
+Implementation Tasks 
+You must: 
+• Implement the class first without a copy constructor and observe the problem 
+• Implement a deep-copying copy constructor, a copy assignment operator and a  destructor 
+• Verify that copies are independent 
+• Run the program under -fsanitize=address (or valgrind) for both versions Design & Analysis
+You must: 
+• Draw memory diagrams for a shallow copy and a deep copy 
+• Explain why the shallow version crashes at the end (double delete) • State the Rule of Three and explain why the three functions go together • Explain the three situations in which the copy constructor is called 
+Experimental Investigation 
+You must: 
+• Add a message in the copy constructor and count how many copies are made when a  Prescription is passed by value and by const reference 
+• Measure the time to copy prescriptions of 10, 1,000 and 100,000 medicines • Report the sanitizer output for both versions 
+• Test self-assignment (p = p) 
+Conclusion 
+When can you rely on the compiler-generated copy constructor, and when must you write  your own? 
+Complete the Code 
+Complete TODO 1 to TODO 3 below so that every copy is independent, and execute the  program under -fsanitize=address. 
+#include <iostream> 
+#include <string> 
+class Prescription { 
+ int n; 
+ std::string* medicines; // dynamically allocated array 
+public: 
+ explicit Prescription(int count) : n(count), medicines(new std::string[count]) {}
+ // TODO 1: Copy constructor: allocate a NEW array of the same size and copy every  // medicine (deep copy) 
+  
+ // TODO 2: Copy assignment: guard against self-assignment, build a new array, copy,  // release the old array and return *this 
+  
+ ~Prescription() 
+ { 
+ // TODO 3: Release the dynamically allocated array 
+  
+ } 
+ void set(int i, const std::string& m) { medicines[i] = m; } 
+ std::string get(int i) const { return medicines[i]; } 
+}; 
+int main() 
+{ 
+ Prescription p(2); 
+ p.set(0, "Paracetamol"); 
+ p.set(1, "ORS"); 
+ Prescription q = p; // copy constructor 
+ q.set(1, "Cetirizine"); 
+ Prescription r(1); 
+ r = p; // copy assignment 
+ p.set(0, "Ibuprofen"); 
+ std::cout << p.get(0) << ' ' << p.get(1) << " | " << q.get(0) << ' ' << q.get(1)
+ << " | " << r.get(0) << ' ' << r.get(1) << '\n'; 
+} 
+Expected output: 
+Ibuprofen ORS | Paracetamol Cetirizine | Paracetamol ORS 
+Delete your copy constructor, run the program again under the sanitizer and record the error  reported. 
+Alternative Concept and Complexity Analysis 
+If the medicine names were stored in a std::vector<std::string> instead of a dynamically  allocated array, the compiler-generated copy constructor would already make a deep copy  (the Rule of Zero). What would the solution be? Analyse the time O(n) and space O(n) to  copy a prescription of n medicines in both designs, and compare them with a shallow copy  (O(1)). 
+Q3 – Dynamic Constructors and Destructors 7 Marks 
+Bloom’s Level: K5 – Evaluate 
+Problem Context – Auditorium Seat Booking 
+An auditorium’s seat map is created when an event is set up; the number of rows and seats  per row differs from event to event. When the event object is destroyed, all memory must be  released and a closing summary written. 
+Implementation Tasks 
+You must: 
+• Write a dynamic constructor that allocates a two-dimensional seat map with new • Write a destructor that releases every allocation and prints a summary • Create events on the stack, on the heap (new/delete) and inside a block • Book and cancel seats 
+Design & Analysis 
+You must: 
+• Explain the order in which constructors and destructors run for local, block-scope and  dynamically created objects
+• Explain what happens if delete is forgotten, and if delete is used instead of delete[] • Explain why the destructor takes no arguments and cannot be overloaded • Draw the memory layout of the seat map 
+Experimental Investigation 
+You must: 
+• Print messages in the constructor and destructor and record the order for each kind of  object 
+• Run with -fsanitize=address, first with a missing delete and then with the correct code • Measure the memory allocated for 10 × 20, 100 × 200 and 1,000 × 2,000 seat maps • Test an event with zero rows 
+Conclusion 
+How does tying memory release to the destructor (the RAII idea) make the program safer? Predict the Output 
+Write the exact output of the program below BEFORE running it. Then compile and run it,  and explain every difference between your prediction and the actual output. 
+#include <iostream> 
+#include <string> 
+struct Logger { 
+ std::string n; 
+ Logger(const std::string& s) : n(s) { std::cout << '+' << n << ' '; } 
+ Logger(const Logger& o) : n(o.n + "c") { std::cout << "copy" << n << ' '; }  ~Logger() { std::cout << '-' << n << ' '; } 
+}; 
+void use(Logger) { std::cout << "use "; } 
+int main()
+{ 
+ Logger a("A"); 
+ { 
+ Logger b("B"); 
+ } 
+ use(a); 
+ Logger* p = new Logger("P"); 
+ delete p; 
+ std::cout << "end "; 
+} 
+My predicted output (write before running): 
+Explain when each object was created and destroyed, and why the copy was made and  destroyed around use(). 
+Alternative Concept and Complexity Analysis 
+If the seat map were one block of rows × seats elements (index r × seats + s) or a  std::vector<std::vector<char>>, instead of an array of row pointers each allocated with new,  what would the solution be? Analyse the access time (O(1) in all), the number of allocations  (1 versus rows + 1) and the extra space for the row pointers. 
+Q4 – Overloading Arithmetic and Stream Operators 7 Marks 
+Bloom’s Level: K5 – Evaluate 
+Problem Context – Money Arithmetic for a Billing Counter 
+A billing counter adds, subtracts and compares amounts of money stored in rupees and paise.  The present code calls functions such as add(a, b) and print(c), which makes the bill  calculation hard to read.
+Implementation Tasks 
+You must: 
+• Write a Money class storing paise in a long long 
+• Overload +, -, +=, == and < as appropriate 
+• Overload << (and >>) for printing and reading amounts 
+• Write the bill calculation using the overloaded operators 
+Design & Analysis 
+You must: 
+• Explain why + returns a new object while += returns a reference to *this • Decide which operators are members and which are friends, and justify each • Explain why << must be a non-member function 
+• Show how a + b is translated by the compiler into a function call 
+Experimental Investigation 
+You must: 
+• Test addition that carries paise into rupees (Rs 0.75 + Rs 0.50) • Test subtraction that produces a negative amount and decide how to handle it • Compare the readability of the bill code with and without operator overloading • Compare the result with a double-based version for 1,000,000 additions 
+Engineering Decision 
+Should Money allow multiplication by another Money? Decide which operators make sense  for money and which do not. 
+Complete the Code 
+Complete TODO 1 and TODO 2 below, and execute the program. 
+#include <iomanip> 
+#include <iostream>
+class Money { 
+ long long paise; 
+public: 
+ Money(long long rupees = 0, int p = 0) : paise(rupees * 100 + p) {} 
+ // TODO 1: Overload + as a member function that returns a new Money object   
+ // TODO 2: Overload == as a member, and << as a friend that prints "Rs 200.00"   
+}; 
+int main() 
+{ 
+ Money a(120, 75), b(79, 25); 
+ Money c = a + b; 
+ std::cout << c << '\n' << std::boolalpha << (c == Money(200)) << '\n'; } 
+Expected output: 
+Rs 200.00 
+true 
+Add a test where paise carry into rupees (Rs 0.75 + Rs 0.50). 
+Alternative Concept and Complexity Analysis 
+If the operators were written as non-member friend functions instead of member functions (or  replaced by named functions add() and equals()), what would the solution be? Analyse  whether time or space changes (all are O(1)), and explain which form allows 100 + m as well  as m + 100.
+Q5 – Overloading Increment, Comparison and Subscript Operators 6 Marks Bloom’s Level: K5 – Evaluate 
+Problem Context – Music Playlist and Track Timer 
+A music player keeps a playlist of tracks and a Time object for the current position. The  player needs time++ and ++time to advance by one second, comparisons between times, and  playlist[i] to reach the i-th track with a range check. 
+Implementation Tasks 
+You must: 
+• Overload prefix and postfix ++ for Time 
+• Overload == and < for Time 
+• Overload [] for Playlist with a range check, in both a const and a non-const version • Use the operators in a short playback simulation 
+Design & Analysis 
+You must: 
+• Explain how the compiler tells prefix from postfix ++ (the int dummy parameter) • Explain why postfix ++ must return a copy and is slower 
+• Explain why operator[] needs a const and a non-const version 
+• Explain what should happen when an index is out of range 
+Experimental Investigation 
+You must: 
+• Verify the values of a and b after a = t++ and b = ++t 
+• Measure the time of 10,000,000 prefix and postfix increments at -O0 and -O2 • Test playlist[-1] and playlist[size] 
+• Test minute and hour roll-over (59:59 → 1:00:00) 
+Conclusion 
+Why do many programmers prefer ++i to i++ for class types?
+Predict the Output 
+Write the exact output of the program below BEFORE running it. Then compile and run it,  and explain every difference between your prediction and the actual output. 
+#include <iostream> 
+struct Counter { 
+ int v; 
+ Counter& operator++() { ++v; return *this; } // prefix  Counter operator++(int) { Counter old = *this; ++v; return old; } // postfix }; 
+int main() 
+{ 
+ Counter c{5}; 
+ Counter a = c++; 
+ Counter b = ++c; 
+ std::cout << a.v << ' ' << b.v << ' ' << c.v << '\n'; 
+} 
+My predicted output (write before running): 
+Explain why a and b have different values, and which version of ++ makes a copy of the  object. 
+Alternative Concept and Complexity Analysis 
+If playlist access used an at(i) function that throws std::out_of_range, or an unchecked  operator[] like a built-in array, instead of operator[] with a range check that prints an error, 
+what would the solution be? Analyse the time per access (O(1) in all, with one extra  comparison for checked access) and measure the cost of the check for 10,000,000 accesses. 
+Q6 – The Rules of Operator Overloading 7 Marks 
+Bloom’s Level: K5 – Evaluate 
+Problem Context – A Simple Text Class for an SMS Gateway 
+An SMS gateway uses its own Text class (holding a dynamically allocated character array) so  that it can control memory carefully. It needs assignment, concatenation with +, comparison  and printing. 
+Implementation Tasks 
+You must: 
+• Implement Text with a constructor, copy constructor, copy assignment and destructor • Overload + for concatenation, == and != for comparison and << for printing • Prevent self-assignment problems 
+• Test long messages and empty messages 
+Design & Analysis 
+You must: 
+• List the operators that cannot be overloaded (::, ., .*, ?:, sizeof) and explain why 
+• Explain the rules: precedence and arity cannot change, at least one operand must be a  user-defined type 
+• Explain why operator= must be a member function 
+• Explain when an overloaded operator should be a friend 
+Experimental Investigation 
+You must: 
+• Count the copies made when a + b + c is evaluated 
+• Run the program under the address sanitizer and fix any reported error • Compare your Text class with std::string for 100,000 concatenations • Test assigning a Text to itself
+Conclusion 
+Your Text class works, but std::string exists. What did writing Text teach you, and when  would you still write such a class? 
+Alternative Concept and Complexity Analysis 
+If the Text class were replaced by std::string, or if + were implemented with += on a copy  (Text operator+(Text a, const Text& b) { a += b; return a; }), what would the solution be?  Analyse the time to evaluate a + b + c for strings of lengths n1, n2, n3 (the characters copied)  and the temporary space created in each version. 
+Q7 – Design a Complex-Number Class from First Principles 10 Marks Bloom’s Level: K5 – Evaluate 
+Problem Context – AC Circuit Impedance Calculator 
+An electrical engineering laboratory needs a calculator for AC circuits. Impedances are  complex numbers: resistors give R + 0j, inductors 0 + jωL and capacitors 0 − j/(ωC). Series  impedances add; parallel impedances combine as (Z1 × Z2) / (Z1 + Z2). The calculator must  print the impedance in rectangular form and its magnitude, and must handle division by zero  safely. 
+You are not given the design. You must develop it from the requirements. Stage 1 – Interpret the Problem | 2 Marks 
+• Identify the data and the operations needed 
+• Identify which constructors are needed (default, from real part, from real and  imaginary parts) 
+• State the requirements as measurable statements 
+Stage 2 – Design | 3 Marks 
+• Design the Complex class with constructors and overloaded +, -, *, /, == and << • Decide which operators are members and which are friends 
+• Present the class design and the formula used for each operator 
+Stage 3 – Implement and Verify | 3 Marks 
+• Implement the class and compute the impedance of a series and a parallel RLC circuit
+• Verify the results by hand calculation 
+• Test division by a zero impedance 
+Stage 4 – Defend the Design | 2 Marks 
+• Compare your class with std::complex<double> 
+• Explain why each constructor and operator is needed 
+• Identify one remaining limitation 
+Alternative Concept and Complexity Analysis 
+If std::complex<double> were used instead of your own Complex class, what would the  solution be? Analyse the time per operation (O(1) in both) and the space (two doubles in  both), and compare accuracy and the work needed to handle division by zero. 
+Submission Requirements 
+GitHub repository link (mandatory) containing the executed code for every task, including  every completed “Complete the Code” program, with input files, output screenshots and a  README.md. 
+• Your report containing the required evidence for Q1–Q7 
+• C++ source code for all questions 
+• Predictions, outputs, memory diagrams, sanitizer reports and timings 
+Assessment Verification 
+Students may be asked to explain, execute or modify any part of their design, code, tests or  results during a brief verification discussion/viva. The student should be able to explain and  defend the work submitted as their own.

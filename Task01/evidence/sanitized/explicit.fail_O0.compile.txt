@@ -1,0 +1,10 @@
+$ g++ -std=c++17 -Wall -Wextra -Wpedantic -Iinclude -g -fsanitize=address,undefined -fno-omit-frame-pointer -O0 -x c++ Task01/explicit.fail.cpp.txt -o build/Task01_explicit.fail_O0_san
+Task01/explicit.fail.cpp.txt:4:12: error: no matching function for call to 'accept'
+    4 | int main(){accept(std::string{"Title"});}
+      |            ^~~~~~
+Task01/explicit.fail.cpp.txt:3:6: note: candidate function not viable: no known conversion from 'std::string' (aka 'basic_string<char>') to 'Book' for 1st argument
+    3 | void accept(Book){}
+      |      ^      ~~~~
+1 error generated.
+
+exit_code=1

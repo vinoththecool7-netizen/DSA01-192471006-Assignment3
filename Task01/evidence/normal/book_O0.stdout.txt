@@ -1,0 +1,8 @@
+Book{title='', author='', copies=0}
+Book{title='Donated Atlas', author='Unknown', copies=1}
+Book{title='C++ Primer', author='Lippman', copies=3}
+empty initialised, PASS
+donation has one copy, PASS
+full record, PASS
+negative copies rejected, PASS
+Checks: 4 passed, 0 failed

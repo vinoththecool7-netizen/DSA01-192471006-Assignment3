@@ -1,0 +1,3 @@
+$ g++ -std=c++17 -Wall -Wextra -Wpedantic -Iinclude -O0 Task01/book.cpp -o build/Task01_book_O0_normal
+
+exit_code=0

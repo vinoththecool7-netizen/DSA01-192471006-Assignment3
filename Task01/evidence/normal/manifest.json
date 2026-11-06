@@ -1,0 +1,64 @@
+{
+  "generated_utc": "2026-11-06T03:18:59.142245+00:00",
+  "platform": "macOS-27.2-arm64-arm-64bit-Mach-O",
+  "compiler": "Apple clang version 21.0.0 (clang-2100.4.1.1)\nTarget: arm64-apple-darwin27.2.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\n",
+  "asan_options": null,
+  "header_sha256": {
+    "include/check.hpp": "d5e71ec3bf1b3cc1a8639ce59e36dcfb0302a7977f55493946243438bbea6c10"
+  },
+  "programs": [
+    {
+      "source": "Task01/book.cpp",
+      "sha256": "a89d2bf2056559c198799718a183fcb6c19b0b080ffb6527283e7091a8d98224",
+      "compile": "g++ -std=c++17 -Wall -Wextra -Wpedantic -Iinclude -O0 Task01/book.cpp -o build/Task01_book_O0_normal",
+      "compile_exit": 0,
+      "expected_compile_failure": false,
+      "run": "build/Task01_book_O0_normal",
+      "stdin": "(embedded or no input)",
+      "run_exit": 0,
+      "expected_sanitizer_failure": false,
+      "matches_expected": null,
+      "passed": true
+    },
+    {
+      "source": "Task01/explicit.fail.cpp.txt",
+      "sha256": "f5c4d6d5ec5d9ee0c929e564fa9b2a440fe5eba1e38ea2411abeb16190c8b4ed",
+      "compile": "g++ -std=c++17 -Wall -Wextra -Wpedantic -Iinclude -O0 -x c++ Task01/explicit.fail.cpp.txt -o build/Task01_explicit.fail_O0_normal",
+      "compile_exit": 1,
+      "expected_compile_failure": true
+    },
+    {
+      "source": "Task01/implicit.ok.cpp.txt",
+      "sha256": "49817d7eec31aa09354fbc9900f589820d58b638a45331896658bf4fbc05ee1d",
+      "compile": "g++ -std=c++17 -Wall -Wextra -Wpedantic -Iinclude -O0 -x c++ Task01/implicit.ok.cpp.txt -o build/Task01_implicit.ok_O0_normal",
+      "compile_exit": 0,
+      "expected_compile_failure": false,
+      "run": "build/Task01_implicit.ok_O0_normal",
+      "stdin": "(embedded or no input)",
+      "run_exit": 0,
+      "expected_sanitizer_failure": false,
+      "matches_expected": null,
+      "passed": true
+    },
+    {
+      "source": "Task01/no_default.fail.cpp.txt",
+      "sha256": "b7c29d90efcefa1f8d40e0d2b957bad8329ec265f67cbf8466804e2d015aa118",
+      "compile": "g++ -std=c++17 -Wall -Wextra -Wpedantic -Iinclude -O0 -x c++ Task01/no_default.fail.cpp.txt -o build/Task01_no_default.fail_O0_normal",
+      "compile_exit": 1,
+      "expected_compile_failure": true
+    },
+    {
+      "source": "Task01/reorder.warn.cpp.txt",
+      "sha256": "fe0d0d449c41fd952406129da7a515c7ff02204d7dd7f268c8fe8257f1f0b58a",
+      "compile": "g++ -std=c++17 -Wall -Wextra -Wpedantic -Iinclude -O0 -x c++ Task01/reorder.warn.cpp.txt -o build/Task01_reorder.warn_O0_normal",
+      "compile_exit": 0,
+      "expected_compile_failure": false,
+      "run": "build/Task01_reorder.warn_O0_normal",
+      "stdin": "(embedded or no input)",
+      "run_exit": 0,
+      "expected_sanitizer_failure": false,
+      "matches_expected": null,
+      "passed": true
+    }
+  ]
+}
