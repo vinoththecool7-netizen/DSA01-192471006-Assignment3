@@ -1,0 +1,51 @@
+{
+  "generated_utc": "2026-11-06T03:22:55.670703+00:00",
+  "platform": "macOS-27.2-arm64-arm-64bit-Mach-O",
+  "compiler": "Apple clang version 21.0.0 (clang-2100.4.1.1)\nTarget: arm64-apple-darwin27.2.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\n",
+  "asan_options": null,
+  "header_sha256": {
+    "include/check.hpp": "d5e71ec3bf1b3cc1a8639ce59e36dcfb0302a7977f55493946243438bbea6c10",
+    "Task04/money.hpp": "592908f317f172a8bcace22e15ec9efa5fb70af43e81a01c86cc9e2a5dc72c45"
+  },
+  "programs": [
+    {
+      "source": "Task04/complete.cpp",
+      "sha256": "921e3ffe30365f670fc6a566283339d8748c99bc496aa8bc39536011e1cddd52",
+      "compile": "g++ -std=c++17 -Wall -Wextra -Wpedantic -Iinclude -O0 Task04/complete.cpp -o build/Task04_complete_O0_normal",
+      "compile_exit": 0,
+      "expected_compile_failure": false,
+      "run": "build/Task04_complete_O0_normal",
+      "stdin": "(embedded or no input)",
+      "run_exit": 0,
+      "expected_sanitizer_failure": false,
+      "matches_expected": true,
+      "passed": true
+    },
+    {
+      "source": "Task04/io.cpp",
+      "sha256": "939dd8769cee8198c73b8b108d3c7e21f2aeb83e8e646e81536b4bb3209af5cc",
+      "compile": "g++ -std=c++17 -Wall -Wextra -Wpedantic -Iinclude -O0 Task04/io.cpp -o build/Task04_io_O0_normal",
+      "compile_exit": 0,
+      "expected_compile_failure": false,
+      "run": "build/Task04_io_O0_normal",
+      "stdin": "Task04/io.stdin.txt",
+      "run_exit": 0,
+      "expected_sanitizer_failure": false,
+      "matches_expected": true,
+      "passed": true
+    },
+    {
+      "source": "Task04/main.cpp",
+      "sha256": "786c665a39b133506786be31bd168e69ef1eed0e63ac6ce5a0022557b38032ff",
+      "compile": "g++ -std=c++17 -Wall -Wextra -Wpedantic -Iinclude -O0 Task04/main.cpp -o build/Task04_main_O0_normal",
+      "compile_exit": 0,
+      "expected_compile_failure": false,
+      "run": "build/Task04_main_O0_normal",
+      "stdin": "(embedded or no input)",
+      "run_exit": 0,
+      "expected_sanitizer_failure": false,
+      "matches_expected": null,
+      "passed": true
+    }
+  ]
+}

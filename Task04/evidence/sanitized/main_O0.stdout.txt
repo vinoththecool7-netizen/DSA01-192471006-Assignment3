@@ -1,0 +1,33 @@
+carry: Rs 1.25
+75+50 paise=125, PASS
+negative refund: Rs -0.75
+negative refund allowed, PASS
+bill: Rs 200.00
+compound reference, PASS
+comparison, PASS
+valid input 0.75, PASS
+0.75 => Rs 0.75
+valid input -1.25, PASS
+-1.25 => Rs -1.25
+valid input 12.3, PASS
+12.3 => Rs 12.30
+valid input +0.05, PASS
++0.05 => Rs 0.05
+valid input 92233720368547758.07, PASS
+92233720368547758.07 => Rs 92233720368547758.07
+valid input -92233720368547758.08, PASS
+-92233720368547758.08 => Rs -92233720368547758.08
+invalid unchanged letters, PASS
+invalid unchanged 1.234, PASS
+invalid unchanged 1e2, PASS
+invalid unchanged 1x, PASS
+invalid unchanged -, PASS
+invalid unchanged 1., PASS
+invalid unchanged 92233720368547758.08, PASS
+invalid unchanged -92233720368547758.09, PASS
+addition overflow, PASS
+subtraction overflow, PASS
+constructor overflow, PASS
+one million additions: integer_paise=10000000 double_rupees=100000.00000133288 error_rupees=1.3328826753422618e-06
+million exact, PASS
+Checks: 22 passed, 0 failed

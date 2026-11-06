@@ -1,0 +1,6 @@
+Rs 0.75
+Rs 0.50
+Rs -1.25
+Invalid amount
+Invalid amount
+Rs 200.00
