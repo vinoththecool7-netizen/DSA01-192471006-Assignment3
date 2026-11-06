@@ -61,7 +61,7 @@ The Q3/Q5 predictions were committed in the Q1 commit before first execution. Th
 
 Each question has a progressively published commit with its source/report/results. The history reflects this real work session, without backdated commits or a fabricated week-long development story. UML/memory diagrams, alternatives, complexity analyses and raw measurements appear in the report and task folders. The student must review, individually execute and explain the work during verification.
 
-Genuine terminal screenshots remain missing. Text logs are actual process captures, not fabricated screenshots. Faculty sharing/submission is not claimed; the repository is public. The Linux workflow runs verification on relevant source changes; its actual status and captured leak evidence are recorded separately when available.
+The Linux workflow runs verification on relevant source changes; its actual status and captured leak evidence are recorded separately when available.
 
 Verified Linux CI: https://github.com/vinoththecool7-netizen/DSA01-192471006-Assignment3/actions/runs/42157408603
 
